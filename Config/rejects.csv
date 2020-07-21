@@ -1,0 +1,4 @@
+regex,Description
+(ASSEMBLY),Remove Assembly classes
+(\d+SUP),Remove Study Support
+(\d+SPORT),Remove Sport classes
