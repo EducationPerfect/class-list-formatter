@@ -85,6 +85,7 @@ Each variable matches to a named column in your school's export file.
 | lti | Student LTI Identifier. Can be the same as ```student.email``` if your LTI identifier is the same.| No |
 | sso | Student SSO Identifier. Can be the same as ```student.email``` if your SSO identifier is the same.| No |
 | UID | Unique Identifer for each student. Can be the same as ```student.email``` or ```student.studentID``` and must be on every single line | Yes |
+
 Please use "" for any fields that are not required, for example under ```lti``` if your school does not have a LTI integration with EP
 
 #### classes
@@ -95,6 +96,7 @@ Each variable matches to a named column in your school's export file.
 | prepend | Column to prepend to final class names | No |
 | classCode | Class Code | Yes |
 | regEx1,2,3 | Regular expressions to apply to ```classes.classCode``` | At least 1 of 3 |
+
 Please use "" for any fields that are not required
 
 ##### Regular Expressions
