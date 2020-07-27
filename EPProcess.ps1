@@ -1,16 +1,16 @@
 ﻿<#
 .Synopsis
 Reformatter for your schools data export.
-Will format your schools SMS export to 'students.csv' and 'teachers.csv' for upload to EPs SFTP server
+Will reformat your schools SMS export to 'students.csv' and 'teachers.csv' for upload to EPs SFTP server
 
 .Description
-v 2020.07.08
+v 2020.07.23
 This tool will reformat your schools data export in to a format that can be automatically processed by EP.
 
 The following file(s) are required:
 -Config\config.ps1
  This file contains configuration data required by the tool and is contained in a seperate file as this data will be particular to your school.
- See get-help .\Config\config.ps1 for more help
+ Please see https://github.com/EducationPerfect/class-list-formatter/ for more details
 
 .PARAMETER rejectsFile
 Override location and file name for rejects input file.
@@ -67,7 +67,7 @@ Rename-Item -Path $inputFile -NewName $tempFile
 Get-Content $tempFile | Set-Content -Encoding utf8 $inputFile
 Remove-Item $tempFile
 
-#Run any require PreProcess from config
+#Run any required PreProcess from config
 if (Get-Command 'PreProcess' -ErrorAction SilentlyContinue){
     PreProcess
 }
@@ -345,7 +345,7 @@ if($global:config.showSummary){
     Write-Output "In all classes:`t`t`t $tmp_total"
 }
 
-#Run any require PostProcess from config
+#Run any required PostProcess from config
 if (Get-Command 'PostProcess' -ErrorAction SilentlyContinue){
     PostProcess
 }
