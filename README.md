@@ -54,6 +54,7 @@ All file locations are relative to the main script.
 | teacherOutFile | CSV file where teacher data will be placed | No |
 | rejectsOutFile | CSV file where rejected data will be placed | No |
 | unknownOutFile | CSV file where unknown data will be placed | No |
+
 Please use "" to suppress creation of unrequired files
 
 These file locations can be temporarily overwritten by providing the same variable and a file location when running ```.\EPProcess.sp1``` in PowerShell.
@@ -71,6 +72,7 @@ Each variable matches to named column in your school's export file.
 | lti | Teacher LTI Identifier. Can be the same as ```teacher.email``` if your LTI identifier is the same.| No |
 | sso | Teacher SSO Identifier. Can be the same as ```teacher.email``` if your SSO identifier is the same.| No |
 | code | Teacher code | No |
+
 Please use "" for any fields that are not required, for example, ```lti``` if your school does not have a LTI integration with EP.
 
 #### students
