@@ -231,10 +231,13 @@ function Generate-OutputRow($matches, $row){
     return $outputrow
 }
 
+#Progress indicator
+$currentCount = 1
+$totalRows = $spreadsheet.Count
 #Loop through all row data
 Foreach ($row IN $spreadsheet)
 {
-
+Write-Progress -Activity "Processing" -Status "Progress: Row $currentCount of $totalRows" -PercentComplete ((($currentCount++)/$totalRows)*100)
 #Cascading if statements here instead of a switch?
     switch -regex ($row.Group.($global:config.classes.classCode))
     {
