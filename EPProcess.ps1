@@ -176,7 +176,13 @@ function Generate-OutputRow($matches, $row){
     #Year, look up code or convert to two digits
     if($matches['Year'].Length -gt 0){
 	    if($global:config.yearLevels.($matches['Year']).Length -gt 0) {
-		    $year = "Year " + $global:config.yearLevels.($matches['Year'])
+			$yearLevel = $global:config.yearLevels.($matches['Year'])
+			#Check if we already have a word else, prepend Year
+		    if ($yearLevel -like "* *"){
+				$year = $yearLevel
+			} else {
+				$year = "Year "+ $yearLevel
+			}
 	    } else {
 		    $year = "Year {0:d2}" -f [int32]($matches['Year'])
 	    }
