@@ -162,7 +162,6 @@ function Generate-OutputRow($matches, $row){
     $subject = ""
     $code= ""
 
-
     #Campus code
     if($matches['Campus'].Length -gt 0){
         $campus = $matches['Campus']+" ";
@@ -211,11 +210,14 @@ function Generate-OutputRow($matches, $row){
         Forename = $row.Group[0].($global:config.students.forename)
         Surname = $row.Group[0].($global:config.students.surname)
         Class = $classname
+        "Class SMS ID" = $code
         "Teacher/s" = $row.Group."Teacher/s" -Join ", "
         "Student ID" = $row.Group[0].($global:config.students.studentID)
         Email = $row.Group[0].($global:config.students.email)
         "LTI Identifier" = $row.Group[0].($global:config.students.LTI)
         "SSO Identifier" = $row.Group[0].($global:config.students.SSO)
+        #"Class Year"
+        #"Class Subject"
     }
 
     #Do post processing that can't be done in the custom object
