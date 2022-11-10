@@ -34,7 +34,7 @@ Depending on what is in the configuration files, you will usually find the follo
 | ```rejects.csv``` | Lines that have been rejected according to ```config/rejects.csv``` |
 | ```unknown.csv``` | Lines that have no matching class code in ```config/classCodes.csv``` |
 
-The first two files can be uploaded to EP's SFTP server (once configured with EP) or used in a Self Service Upload.
+The first two files can usually be sent to EP or used in a Self Service Upload.
 The last two files may need to be checked for classes that should have been included.
 
 # Configuration
