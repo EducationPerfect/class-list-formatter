@@ -1,6 +1,6 @@
 # ![EP](https://www.educationperfect.com/logo_16_16.png) class-list-formatter
 
-This script is intended to reformat school class data exports into a format that can be automatically processed by Education Perfect.
+This script is intended to reformat school class data exports into a format that ~~can be automatically processed~~ easier processed by Education Perfect.
 
 ## What is included
 | File | Purpose |
